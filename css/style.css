@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+:root{
+    /*-->Colors*/
+        /*Primary*/
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+        /*Neutral*/
+    --very-dark-blue: hsl( 212, 21%, 14% );
+    --dark-grayish-blue: hsl( 228, 12%, 48% );
+    --white: hsl( 0, 0%, 100% );
+}
+html,body{
+    height: 100%;
+}
+body{
+    background-color: var(--cream); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.card-container{
+    width: 600px;
+    height: 450px;
+    background-color: var(--white);
+    display: flex;
+    border-radius: 0.625em;
+}
+.img-container{
+    background-image: url('../img/image-product-desktop.jpg');
+    background-size: cover;
+    flex-basis: 50%;
+    border-top-left-radius: 0.625em;
+    border-bottom-left-radius: 0.625em;
+}
+.content{
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+.title-top{
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: --dark-grayish-blue
+}
+.title-principal{
+    font-family: 'Fraunces', serif;
+    font-size: 2.5rem;
+    line-height: 1em;
+    font-weight: bold;
+}
+.text{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.7em;
+    color: var(--dark-grayish-blue);
+}
+.price-container{
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+}
+.actual-price{
+    font-family: 'Fraunces', serif;
+    font-size: 2.2em;
+    font-weight: bolder;
+    color: var(--dark-cyan);
+}
+.discounted-price{
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+}
+.button{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em 2em;
+    color: var(--white);
+    font-weight: 500;
+    background-color: var(--dark-cyan);
+    transition: background-color 500ms ease-out;
+    border-radius: 0.625em;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: rgb(26, 64, 49);
+}
+
+@media (max-width: 575.98px) {
+    .card-container{
+        flex-direction: column;
+        width: 345px;
+        height: 610px;
+    }
+    .img-container{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.625em;
+        background-position-y: -10rem;
+    }
+    .title-principal{
+        font-size: 2rem;
+    }
+}
